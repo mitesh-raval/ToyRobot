@@ -1,6 +1,6 @@
-==================================
+=================
 Toy Robot Program
-==================================
+=================
 
 How to run:
 1) Open the directory where toyrobot.py is located (assuming it has been
