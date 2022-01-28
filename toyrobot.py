@@ -21,9 +21,13 @@ def ValidPlaceCmd(cmd, argsDict):
     args = cmd.split(' ')[1].split(',')
     if '' in args or len(args) != 3:
         return False
+    if not args[0].isdecimal() or \
+       not args[1].isdecimal() or \
+       not args[2].isalpha() :
+            return False
     argsDict['X'] = int(args[0])
     argsDict['Y'] = int(args[1])
-    argsDict['F'] = str(args[2])
+    argsDict['F'] = args[2]
     if argsDict['F'] not in ['NORTH','SOUTH','EAST','WEST']:
         return False
     if argsDict['X'] not in range(MAX['X']) or \
