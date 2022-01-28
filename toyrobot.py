@@ -19,6 +19,8 @@ def ValidPlaceCmd(cmd, argsDict):
     if not cmd.startswith('PLACE '):
         return False
     args = cmd.split(' ')[1].split(',')
+    if '' in args or len(args) != 3:
+        return False
     argsDict['X'] = int(args[0])
     argsDict['Y'] = int(args[1])
     argsDict['F'] = str(args[2])
